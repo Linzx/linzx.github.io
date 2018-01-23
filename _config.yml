@@ -1,91 +1,105 @@
-# SITE CONFIGURATION
-baseurl: ""
-url: "https://linzx.github.io"
+# Site settings
+title: Gityuan
+SEOTitle: Gityuan博客 | 袁辉辉博客
+header-img: img/nav-home.jpg
+email: gityuan@gmail.com
+description: "Android,Gityuan,Android技术博客,Android源码分析,袁辉辉"
+keyword: "Android,Gityuan,Android技术博客,Android源码分析,袁辉辉"
+url: "http://gityuan.com"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-# THEME-SPECIFIC CONFIGURATION
-theme_settings:
-  # Meta
-  title: XueLin's info
-  avatar: assets/img/triangle.svg
-  favicon: assets/favicon.ico
-  gravatar: # Email MD5 hash
-  description: "Xuelin's info" # used by search engines
 
-  # Header and footer text
-  header_text: > #two or three lines to describe your site
-     <p>Xuelin's blog</p>
-  header_text_feature_image: assets/img/pexels/triangular.jpeg
-  footer_text: >
-   Copyright © Xuelininfo 2018 | Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
-  # Icons
-  rss: true
-  email_address: "zhangxlnju@163.com" # Full email address, e.g. "sam@example.com"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  gitlab:
-  github: "Linzx"
-  google_plus:
-  instagram:
-  keybase:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: # "twitter username"
-  vimeo:
-  wordpress:
-  youtube:
+# SNS settings
+RSS: true
+weibo_username:     gityuan
+zhihu_username:     gityuan
+google_userId:   101388994961262711072
+#github_username:    yuanhuihui
+#twitter_username:  gityuan
+#facebook_username:  gityuan
+# linkedin_username:  firstname-lastname-idxxxx
 
-  # Scripts / Features 
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  katex: true # Enable if using math markup
-  portfolio: true
-  search: true
-  tags: true
-  
-  
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
-  str_next_post: "Next post"
-  str_previous_post: "Previous post"
-  str_next_page: "Next"
-  str_previous_page: "Prev"
-  str_continue_reading: "Continue reading"
-  str_javascript_required_disqus: "Please enable JavaScript to view comments."
 
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
 
-  # Post navigation
-  post_navigation: true
-
-# PAGINATION
-paginate: 5
-paginate_path: "blog/page:num"
-
-# PORTFOLIO
-collections:
-  portfolio:
-    output: true
-    permalink: /:collection/:name
-
-# BUILD SETTINGS
-markdown: kramdown
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: :compressed
-plugins: [jekyll-paginate, jekyll-seo-tag]
-theme: type-on-strap # If using the theme as a jekyll theme gem
-exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png"]
+permalink: /:year/:month/:day/:title/
+paginate: 10
+paginate_path: "page:num"
+
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
+
+# Duoshuo settings
+duoshuo_username: gityuan
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: false                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+# ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# Google Analytics
+# ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+# ga_domain: gityuan.com
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "Android OS Developer"
+sidebar-avatar: /images/about-me/logo2.png   
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+# hotpages
+hotpages: [
+    {
+        title: "Android系统开篇    ",
+        href:  "http://gityuan.com/android"
+    }, {
+        title: "彻底理解Android Binder通信架构",
+        href:  "http://gityuan.com/2016/09/04/binder-start-service/"
+    },{
+        title: "Binder系列开篇",
+        href:  "http://gityuan.com/2015/10/31/binder-prepare/"
+    },{
+        title: "理解Android进程创建流程",
+        href:  "http://gityuan.com/2016/03/26/app-process-create/"
+    },{
+        title: "如何自学 Android   ",
+        href:  "http://gityuan.com/2016/04/24/how-to-study-android/"
+    }
+]
+
+#money settings
+
+money-alipay: /images/about-me/alipay.jpg
+money-weixin: /images/about-me/weixin.jpg
+money-description: 如果觉得我的文章对您所有帮助，请随意打赏，或者分享转发给更多朋友。您的支持与认可，将使我更加坚持不懈地创作，谢谢您！
