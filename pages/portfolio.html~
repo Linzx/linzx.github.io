@@ -1,0 +1,11 @@
+--- 
+layout: bootstrap 
+title : Andorid 
+permalink: /android/
+subtitle: "Android Technical articals" 
+feature-img: "assets/img/pexels/computer.jpeg"
+hide: false
+tags: [Android]
+---
+
+{% include portfolio.html %}
