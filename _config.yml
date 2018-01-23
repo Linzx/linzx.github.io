@@ -1,20 +1,20 @@
 # Site settings
-title: Gityuan
-SEOTitle: Gityuan博客 | 袁辉辉博客
+title: Xuelin's Info
+SEOTitle: Xuelin's Info
 header-img: img/nav-home.jpg
-email: gityuan@gmail.com
-description: "Android,Gityuan,Android技术博客,Android源码分析,袁辉辉"
-keyword: "Android,Gityuan,Android技术博客,Android源码分析,袁辉辉"
-url: "http://gityuan.com"              # your host, for absolute URL
+email: zhangxlnju@163.com
+description: "Android,XuelinInfo,Android"
+keyword: "Android,XuelinInfo"
+url: "http://linzx.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
 # SNS settings
 RSS: true
-weibo_username:     gityuan
-zhihu_username:     gityuan
-google_userId:   101388994961262711072
+weibo_username:     #gityuan
+zhihu_username:     #gityuan
+google_userId:   #101388994961262711072
 #github_username:    yuanhuihui
 #twitter_username:  gityuan
 #facebook_username:  gityuan
